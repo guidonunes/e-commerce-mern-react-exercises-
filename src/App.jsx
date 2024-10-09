@@ -1,8 +1,16 @@
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
 
 const App = () => {
   return (
     <div>
-      <h1>Hello from React</h1>
+      <Header />
+      <Hero />
+      <Contact />
+      <Footer />
     </div>
   );
 };
