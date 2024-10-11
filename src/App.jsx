@@ -1,16 +1,19 @@
-import Header from './components/Header';
 import Hero from './components/Hero';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+
 
 
 const App = () => {
+
+  const itemObj = {
+    id: 1,
+    name: 'Biscuit',
+    flavor: 'Sweet',
+  }
+
+
   return (
     <div>
-      <Header />
-      <Hero />
-      <Contact />
-      <Footer />
+      <Hero item = {itemObj} />
     </div>
   );
 };

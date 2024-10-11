@@ -1,8 +1,12 @@
 
-const Hero = () => {
+const Hero = (props) => {
   return (
     <div>
-      <img src="https://cdn.fs.teachablecdn.com/uCoqmkHsS5OW2rTgbQIo" alt="hero" />
+      <ul>
+        <li>id: {props.item.id} </li>
+        <li>name: {props.item.name} </li>
+        <li>flavor: {props.item.flavor} </li>
+      </ul>
     </div>
   );
 };
