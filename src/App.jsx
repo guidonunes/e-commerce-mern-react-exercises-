@@ -4,16 +4,14 @@ import Hero from './components/Hero';
 
 const App = () => {
 
-  const itemObj = {
-    id: 1,
-    name: 'Biscuit',
-    flavor: 'Sweet',
+  const BtnFunction = () => {
+    alert('Hello World');
   }
 
 
   return (
     <div>
-      <Hero item = {itemObj} />
+      <Hero item = {BtnFunction} />
     </div>
   );
 };
