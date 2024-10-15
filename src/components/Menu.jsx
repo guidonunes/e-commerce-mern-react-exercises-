@@ -5,9 +5,9 @@ const Menu = () => {
   return (
     <div>
       <ul>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to ="/about">About</NavLink></li>
-        <li><NavLink to ="/contact">Contact</NavLink></li>
+        <li><NavLink className={({isActive})=> isActive ? "active-item":"pending-item"} to="/">Home</NavLink></li>
+        <li><NavLink className={({isActive})=> isActive ? "active-item":"pending-item"} to ="/about">About</NavLink></li>
+        <li><NavLink className={({isActive})=> isActive ? "active-item":"pending-item"} to ="/contact">Contact</NavLink></li>
       </ul>
     </div>
   )

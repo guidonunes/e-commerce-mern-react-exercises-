@@ -1,0 +1,9 @@
+.active-item {
+  color: green;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.pending-item {
+  color: red;
+}
