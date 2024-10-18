@@ -3,18 +3,21 @@ import { useRef } from 'react';
 
 
 function App() {
-  let myImg = useRef()
+  let firstName, lastName = useRef()
+
 
 
   const changeHeadline = () => {
-    myImg.current.src = "https://placehold.co/600x400/000000/FFF";
-    myImg.current.setAttribute('height', '200');
-    myImg.current.setAttribute('width', '300');
+    let fName = firstName.value;
+    let lName = lastName.value;
+
+    alert(fName + ' ' + lName)
   }
 
   return (
     <div>
-      <img ref={myImg} src='https://placehold.co/600x400' />
+      <input ref={(a)=>firstName=a} placeholder='First Name' /> <br />
+      <input ref={(a)=>lastName=a} placeholder='Last Name' /> <br />
 
       <button onClick={changeHeadline}>Click me!</button>
     </div>
