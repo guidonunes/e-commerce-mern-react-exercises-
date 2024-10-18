@@ -1,22 +1,24 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 
 
 
 function App() {
-  let myHeadline = useRef()
+  let myImg = useRef()
 
 
   const changeHeadline = () => {
-    myHeadline.innerHTML = "<ul><li>B<li>A</li></li></ul>";
+    myImg.current.src = "https://placehold.co/600x400/000000/FFF";
+    myImg.current.setAttribute('height', '200');
+    myImg.current.setAttribute('width', '300');
   }
 
   return (
     <div>
-      <h1 ref={(h1)=>myHeadline=h1}></h1>
+      <img ref={myImg} src='https://placehold.co/600x400' />
 
       <button onClick={changeHeadline}>Click me!</button>
     </div>
   )
 }
 
-export default App
+export default App;
