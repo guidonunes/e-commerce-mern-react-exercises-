@@ -1,25 +1,32 @@
 import React, { useState } from 'react';
 
 function App() {
-  const [myObj, setMyObj] = useState({
-    key1: 'gui 1',
-    key2: 'gui 2',
-    key3: 'gui 3',
-  });
+  const [list, setList] = useState([]);
+  const [item, setItem] = useState('');
 
-  const change = () => {
-    setMyObj(
-      prevObj => ({
-        ...prevObj,
-        key1: 'gui 1 changed',
-      })
-    );
+  const addToList = () => {
+    list.push(item);
+    setList([...list]);
   }
 
   return (
     <div>
-      <h1>{myObj.key1}</h1>
-      <button onClick={change}>Change</button>
+      <table>
+        <tbody>
+          {list.length!==0?(
+            list.map((item, index) => (
+              <tr key={index}>
+                <td>{item}</td>
+                <td><button>Remove</button></td>
+              </tr>
+            ))
+          ):(<tr><td>No items</td></tr>)}
+        </tbody>
+      </table>
+
+      <p>{list.length}</p>
+      <input onChange={(e)=>setItem(e.target.value)} placeholder='item' />
+      <button onClick={addToList}>Add</button>
     </div>
   )
 }
