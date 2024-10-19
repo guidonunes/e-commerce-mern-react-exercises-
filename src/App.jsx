@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
 
 function App() {
-  const [number, setNumber] = useState(0);
+  const [myObj, setMyObj] = useState({
+    key1: 'gui 1',
+    key2: 'gui 2',
+    key3: 'gui 3',
+  });
 
-  const addNumber = () => {
-    setNumber(number + 1);
+  const change = () => {
+    setMyObj(
+      prevObj => ({
+        ...prevObj,
+        key1: 'gui 1 changed',
+      })
+    );
   }
 
   return (
     <div>
-      <h1>Number: {number} </h1>
-      <button onClick={addNumber}>Click me!</button>
+      <h1>{myObj.key1}</h1>
+      <button onClick={change}>Change</button>
     </div>
   )
 }
