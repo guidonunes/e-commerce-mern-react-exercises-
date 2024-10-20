@@ -1,32 +1,29 @@
 import React, { useState } from 'react';
 
 function App() {
-  const [list, setList] = useState([]);
-  const [item, setItem] = useState('');
 
-  const addToList = () => {
-    list.push(item);
-    setList([...list]);
-  }
+  let [formObj, setFormObj] = useState({
+    firstName: '',
+    lastName: '',
+    city: '',
+    gender: ''
+  });
 
   return (
-    <div>
-      <table>
-        <tbody>
-          {list.length!==0?(
-            list.map((item, index) => (
-              <tr key={index}>
-                <td>{item}</td>
-                <td><button>Remove</button></td>
-              </tr>
-            ))
-          ):(<tr><td>No items</td></tr>)}
-        </tbody>
-      </table>
-
-      <p>{list.length}</p>
-      <input onChange={(e)=>setItem(e.target.value)} placeholder='item' />
-      <button onClick={addToList}>Add</button>
+    <div className="container">
+      <form action="">
+        <input value={formObj.firstName} placeholder='First Name' />
+        <input value={formObj.lastName} placeholder='Last Name' />
+        <select value={formObj.city}>
+          <option value="">Choose City</option>
+          <option value="Rio">Rio</option>
+          <option value="Salvador">Salvador</option>
+        </select>
+        <input  checked={formObj.gender === "Male"} type="radio" name="gender" />Male
+        <input checked={formObj.gender === "Female"} type="radio" name="gender" />Female
+        <br />
+        <button type='submit'>Submit</button>
+      </form>
     </div>
   )
 }
