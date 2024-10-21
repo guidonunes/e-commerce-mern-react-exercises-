@@ -4,15 +4,15 @@ This repository contains exercises designed to help you master essential React c
 
 ## Topics Covered
 
-* React Fundamentals
-Understanding React components and their structure
-JSX syntax and rendering components
+* React Fundamentals <br>
+1. Understanding React components and their structure.
+2. JSX syntax and rendering components.
 
-* React Routing
-Implementing client-side routing
-Creating navigation between pages using react-router-dom
+* React Routing <br>
+1. Implementing client-side routing.
+2. Creating navigation between pages using react-router-dom.
 
-* React Hooks
-Managing state with useState
-Handling side effects with useEffect
-Accessing DOM elements using useRef
+* React Hooks <br>
+1. Managing state with useState.
+2. Handling side effects with useEffect.
+3. Accessing DOM elements using useRef.
