@@ -1,8 +1,18 @@
-# React + Vite
+# e-Commerce MERN - React Exercises (Udemy)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains exercises designed to help you master essential React concepts in the context of building an e-commerce application. The exercises cover React fundamentals, including component structure, JSX, routing, and hooks. By completing these exercises, you'll strengthen your ability to create dynamic, interactive web applications using React.
 
-Currently, two official plugins are available:
+## Topics Covered
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* React Fundamentals
+Understanding React components and their structure
+JSX syntax and rendering components
+
+* React Routing
+Implementing client-side routing
+Creating navigation between pages using react-router-dom
+
+* React Hooks
+Managing state with useState
+Handling side effects with useEffect
+Accessing DOM elements using useRef
